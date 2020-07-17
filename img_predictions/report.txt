@@ -1,5 +1,0 @@
-Images used- 521
-Epochs- 10000
-Test images- 521
-
-Notes- saved weights

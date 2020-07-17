@@ -21,7 +21,7 @@ def get_color(img):
     return x
 
 def get_images(path, color="lab"):
-    images = list()
+    images = np.array()
     for filename in os.listdir(path):
         if filename[0] != '.':
             if color == "lab":
@@ -41,6 +41,8 @@ Convert the Lab image back to RGB.
 x = get_images("./OurTrainingImages/") #l value only
 print(len(x))
 y = get_images("./OurTrainingImages/", color="yes") #a and b values
+
+print(x.shape())
 
 # Recreate the exact same model, including its weights and the optimizer
 # model = tf.keras.models.load_model('./img_predictions/model.h5')
