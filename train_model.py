@@ -80,19 +80,19 @@ model.fit(x=x,y=y, batch_size=1,verbose=1, epochs=1000)
 model.save('./img_predictions/model.h5') 
 
 
-#Load test images
-test_images = get_images("./OurTrainingImages/")
-# print(len(test_images))
+# #Load test images
+# test_images = get_images("./OurTrainingImages/")
+# # print(len(test_images))
 
-# make predictions
-for x in test_images:
-    output = model.predict(x)
-    output*=128
-    cur = np.zeros((256,256,3))
-    cur[:,:,0] = x[:,:,0] # L layer
-    cur[:,:,1:] = output[0] # A B layers
-    rgb_image = lab2rgb(cur)
+# # make predictions
+# for x in test_images:
+#     output = model.predict(x)
+#     output*=128
+#     cur = np.zeros((256,256,3))
+#     cur[:,:,0] = x[:,:,0] # L layer
+#     cur[:,:,1:] = output[0] # A B layers
+#     rgb_image = lab2rgb(cur)
 
-    img = array_to_img(rgb_image)
-    # img.save("./img_predictions/{}.jpg".format(i))
-    img.show() 
+#     img = array_to_img(rgb_image)
+#     # img.save("./img_predictions/{}.jpg".format(i))
+#     img.show() 
