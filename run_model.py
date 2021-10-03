@@ -26,7 +26,7 @@ def get_images(path):
 
 
 # Recreate the exact same model, including its weights and the optimizer
-model = tf.keras.models.load_model('./saved models/model.h5')
+model = tf.keras.models.load_model('./saved models/model0.h5')
 
 
 #Load test images
