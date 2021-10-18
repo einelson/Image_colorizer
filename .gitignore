@@ -3,5 +3,4 @@
 .vs/ProjectSettings.json
 *.sqlite
 .vs/VSWorkspaceState.json
-*.h5
-*.h5
+
